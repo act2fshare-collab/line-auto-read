@@ -3,6 +3,9 @@ const axios = require("axios");
 
 const app = express();
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Server is alive ✅");
+});
 
 const CHANNEL_ACCESS_TOKEN =
 process.env.CHANNEL_ACCESS_TOKEN;
